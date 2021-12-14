@@ -1,0 +1,16 @@
+.badge{
+  display: inline-block;
+  padding:rem(2) rem(5);
+  @include setFont(17,regular,white);
+  border-radius: rem(3);
+
+  &--primary{
+    @include setColor(primary,true);
+  }
+  &--orange{
+    @include setColor(dark-orange,true);
+  }
+  &--dark-yellow{
+    @include setColor(dark-yellow,true);
+  }
+}

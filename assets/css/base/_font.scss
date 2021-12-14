@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+$font-weights:(
+  //  thin:100,
+   light:300,
+   regular:400,
+   // regular-italic:400,
+   medium:500,
+   // semibold:600,
+   bold:700,
+   // xbold:800,
+  //  black:900,
+   // c-semibold:600,
+);
+
+@function getFontWeight($weight) {
+   @return map-get($font-weights, $weight);
+}
+
+
+
+
+$uiFonts: (
+   thin:"#{$main-font-family}-100",
+   light:"#{$main-font-family}-300",
+   regular:"#{$main-font-family}-400",
+   medium:"#{$main-font-family}-500",
+   bold:"#{$main-font-family}-700",
+   black:"#{$main-font-family}-900",
+);
+
+
+@mixin setFont($size, $weight, $color,$line-height:"") {
+   font-family: 'Roboto';
+   font-size:rem($size);
+   font-weight:getFontWeight($weight);
+   @include setColor($color);
+   @if $line-height != ""{
+      line-height: rem($line-height);
+   }
+}

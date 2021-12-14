@@ -1,0 +1,57 @@
+// ui color palette
+$ui-colors:(primary:$primary,
+  secondary:$secondary,
+  success:#0DC74E,
+  black:#171719,
+  dark-gray:#737376,
+
+  sidebar-bg:#EDEDED,
+  sidebar-active-link:#F6F6F6,
+
+  menu-bg:#F6F6F6,
+  text-box-color:#EBEBEB,
+  dark-orange: #FC7501,
+  dark-yellow:#BAA500,
+  border-color:#CCCCCC,
+
+  heading-color:#171719,
+  light-gray:#B4B4B5,
+  light-card-color:#F6F6F6,
+);
+
+
+html {
+  &:root {
+
+    @each $map-key,
+    $map-value in $ui-colors {
+      $alias: "--"+ $map-key;
+      #{$alias}:#{$map-value};
+    }
+
+    ;
+  }
+}
+
+@function getColor($colorName) {
+
+  @each $map-key,
+  $map-value in $ui-colors {
+    @if $map-key==$colorName {
+      @return $map-value
+    }
+  }
+
+  ;
+  @return $colorName;
+}
+
+@mixin setColor($colorName, $bg : false) {
+  @if $bg==true {
+    background-color: var(--#{$colorName}, getColor($colorName));
+  }
+
+  @else {
+    color: var(--#{$colorName}, getColor($colorName));
+  }
+}

@@ -1,0 +1,18 @@
+// @import "rfs/scss";
+@import "utils/**/*.scss";
+@import "base/**/*.scss";
+
+
+/* bootstrap base*/
+@import "~bootstrap";
+/* bootstrap end */
+
+
+@import "components/**/*.scss";
+@import "layout/**/*.scss";
+@import "pages/**/*.scss";
+@import "themes/**/*.scss";
+@import "vendors/**/*.scss";
+
+
+

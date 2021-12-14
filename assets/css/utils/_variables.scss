@@ -1,0 +1,109 @@
+$sidebar-width:85px;
+$menu-width:309px;
+$border-primary:1px solid #CCCCCC;
+$main-font-family:'Roboto', sans-serif;
+
+
+//bootstrap overrides
+$primary:#2A71FA;
+$secondary:#737376;
+$success:#0DC74E;
+
+$font-family-sans-serif: $main-font-family,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji";
+$btn-font-family:$font-family-sans-serif;
+$input-btn-font-family:$font-family-sans-serif;
+
+$form-group-margin-bottom:25px;
+$input-border-color:#CCCCCC;
+$input-border-radius:5px;
+$input-box-shadow:false;
+
+$link-hover-decoration:none;
+
+/* grid */
+
+$grid-breakpoints: (
+    xs: 0,
+    xsm:350px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xlg:1500px,
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xlg: 1445px,
+);
+
+$enable-shadows:false;
+$spacer: 0.625rem; //10
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 1,
+    ),
+    //10
+    2:
+      (
+        $spacer * 2,
+      ),
+    //20
+    3:
+      (
+        $spacer * 3,
+      ),
+    //30
+    4:
+      (
+        $spacer * 4,
+      ),
+    //40
+    5:
+      (
+        $spacer * 6,
+      ),
+    //60
+    6:
+    (
+      $spacer * 7,
+    ),
+  //70
+    7:
+      (
+        $spacer * 9,
+      ),
+    //90
+    8:
+      (
+        $spacer * 15,
+      ),
+    //150
+    9:
+      (
+        $spacer * 0.5,
+      ),
+    //5
+  ),
+  $spacers
+);
+$headings-margin-bottom: 0;
+$paragraph-margin-bottom:0;
